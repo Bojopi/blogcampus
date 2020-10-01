@@ -1,13 +1,192 @@
-body {
+:root {
+  --blanco: #ffffff;
+  --gris1: #f1f1f1;
+  --rojo2: #DF1A22;
+  --gris3: #2d1a1a;
+  --negro: #000000;
+  --headingFont:'Raleway', sans-serif;
+  --textFont:  'Roboto', sans-serif;
+}
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%; 
+}
+body {
+  min-height: 100%;
+  background-color: var(--gris1);
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--headingFont);
+}
+header{
+  background-color: var(--gris3);
+  min-height: 8vh;
+}
+.logo{
+  width: 90%;
+}
+h4{
+  font-size: 1.4rem;
+  font-family: var(--textFont);
+  font-weight: 900;
+}
+h2
+{
+  font-size: 3.6rem;
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin: 0;
+
+}
+main h2{
+  margin: 30px 0;
+}
+header .container{
+  display: flex;
+  height: 8vh;
+  align-items: center;
+}
+header .container h3{
+  color: var(--blanco);
+  font-family: var(--textFont);
+  font-weight: bold;
+  margin: 0;
+}
+.material-icons{
+  vertical-align: middle;
+}
+.container-logo{
+  /* float: left; */
+}
+label{
+  font-weight: bold;
+}
+.container-redes{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.item2{
+  grid-column-start:1 ;
+  grid-column-end:5 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotron{
+  
+  background: #fff url('./img/fondo.png') no-repeat;
+  background-size: 100%;
+  background-position-y: 90%;
+  margin: 0;
+  min-height: 400px;
+
+}
+.nav .container{
+  display: flex;
+}
+.container.jumbo{
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .container.not{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  column-gap: 20px;
+  background-color: var(--blanco);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main .container.not .container-noticias h4{
+  font-size: 3.4rem;
+  opacity: .8;
+  font-weight: 600;
+  margin: 30px 0 15px 0;
+}
+main .container.not .container-extra{
+  padding: 0 20px;
+}
+.card-header.extra{
+  text-align: center;
+  background-color: #343A40;
+  color: white;
+  font-family: var(--textFont);
+  font-weight: 600;
+  font-size: 1.9rem;
+}
+.info-noticia{
+  background-color: var(--rojo2);
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 5px 0;
+  
+}
+.container-login a{
+  color: var(--negro);
+  background-color: white;
+  border-radius: 20%;
+}
+.collapse {
+  justify-content: space-between;
+}
+.info-noticia p{
+  margin: 0;
+  color: white;
+  font-family: var(--textFont);
+  font-weight: 600;
+}
+.card .card-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-body img{
+  width: 50%;
+}
+
+footer{
+  background-color: #343A40;
+  min-height: 20vh;
+}
+footer h2{
+  color: var(--blanco);
+}
+.intro{
+  padding: 20px 0;
+}
+.btn{
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: var(--rojo2);
+  border: none;
+}
+
+.btn:hover{
+  
+  background-color: var(--rojo2);
+}
+.card.log{
+  width: 60%;
+}
+.card.log .card-header{
+  text-align: center;
+  font-size: 2.0rem;
+  color: white;
+  font-family: var(--textFont);
+  font-weight: bold;
+  background-color: var(--rojo2);
+}
+.card.log .card-body form{
+  padding: 20px;
+  width: 100%;
 }
