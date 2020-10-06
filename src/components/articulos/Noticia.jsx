@@ -1,14 +1,17 @@
 import React,{Fragment} from 'react'
 
+import {Link} from 'react-router-dom'
+
 import logo from '../../img/campus-virtual.png';
 
 const Noticia = ({noticia}) => {
+    debugger
     return ( 
         <Fragment>
             <h4>{noticia.titulo}</h4>
             <div className="info-noticia">
-                <p>{noticia.autor} </p>
-                <p> {noticia.fecha} </p>
+                <p>{noticia.Autor} </p>
+                <p> {noticia.fecha.substr(0,10)} </p>
             </div>
             <div className="card">
                 <div className="card-body">
@@ -16,7 +19,7 @@ const Noticia = ({noticia}) => {
                 </div>
             </div>
             <p className="intro">{noticia.introduccion}</p>
-            <button className="btn btn-info">Leer mas</button>
+            <Link className="btn btn-info" to={`/detalle-articulo/${noticia.id}`}>Leer mas</Link>
             <hr/>
         </Fragment>
      );

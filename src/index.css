@@ -35,16 +35,25 @@ h4{
   font-family: var(--textFont);
   font-weight: 900;
 }
-h2
-{
+h2{
   font-size: 3.6rem;
   font-family: var(--headingFont);
   font-weight: 900;
   margin: 0;
 
 }
+h3{
+  font-size: 2.6rem;
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin: 15px 0;
+
+}
 main h2{
   margin: 30px 0;
+}
+.alert{
+  margin: 20px 0
 }
 header .container{
   display: flex;
@@ -103,6 +112,23 @@ main .container.not{
   grid-template-columns: 60% 40%;
   column-gap: 20px;
   background-color: var(--blanco);
+}
+.container.nuevoar{
+  background-color: var(--blanco);
+  
+}
+.form-nuevo-articulo{
+  background-color: var(--blanco);
+  padding: 0 20px;
+
+}
+.container-form{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.container-detalle{
+  display: grid;
+  grid-template-columns: 60% 40%;
 }
 
 main .container.not .container-noticias h4{
@@ -167,13 +193,13 @@ footer h2{
 .btn{
   font-size: 1.3rem;
   font-weight: 500;
-  background-color: var(--rojo2);
+  /* background-color: var(--rojo2); */
   border: none;
 }
 
 .btn:hover{
   
-  background-color: var(--rojo2);
+  /* background-color: var(--rojo2); */
 }
 .card.log{
   width: 60%;

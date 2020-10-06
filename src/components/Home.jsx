@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react';
 
+import {Link} from 'react-router-dom';
+
 import Header from './layout/Header';
 import Jumbotron from './layout/Jumbotron';
 import Navegacion from './layout/Navegacion';
 import Footer from './layout/Footer';
-import ListaNoticias from './noticias/ListaNoticias';
-import ListaExtras from './noticias/ListaExtras';
+import ListaNoticias from './articulos/ListaNoticias';
+import ListaExtras from './articulos/ListaExtras';
 
 const Home = () => {
     return ( 
@@ -17,6 +19,8 @@ const Home = () => {
                 <div className="container not">
                     <div className="container-noticias">
                         <h2>Lee las Nuevas Noticias</h2>
+                        <Link className="btn btn-danger" to='/nuevo-articulo'>Agregar Nuevo Articulo</Link>
+                        
                         <ListaNoticias />
 
                     </div>
