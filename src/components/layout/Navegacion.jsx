@@ -15,13 +15,16 @@ const Navegacion = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/" >Opcion 1 <span className="sr-only">(current)</span></Link>
+                    <Link className="nav-link" to="/" >Blog<span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/">Opcion 2</Link>
+                    <Link className="nav-link" to="/">Entrevistas - Experiencias</Link>
                     </li>
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/">Opcion 3</Link>
+                    <Link className="nav-link" to="/">Recursos TICs</Link>
+                    </li>
+                    <li className="nav-item active">
+                    <Link className="nav-link" to="/">Recomendaciones</Link>
                     </li>
                     
                 </ul>

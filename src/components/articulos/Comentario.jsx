@@ -6,10 +6,14 @@ const Comentario = ({comentario}) => {
     return ( 
         <div className="comentario">
             <img src={logo} width='50' alt=""/>
-            <b>{comentario.autor}</b>
-            <small>{comentario.fecha}</small>
-            <small>{comentario.hora}</small>
+            <div className="info">
+                <b>{comentario.autor}</b>
+                <small><b>{comentario.fecha.substr(0,10)}</b>  / <span> {comentario.hora}</span></small>
+                
+
+            </div>
             <p>{comentario.comentario}</p>
+            
         </div>
      );
 }

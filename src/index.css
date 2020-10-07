@@ -191,7 +191,8 @@ footer h2{
   padding: 20px 0;
 }
 .btn{
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  margin: 20px 0;
   font-weight: 500;
   /* background-color: var(--rojo2); */
   border: none;
@@ -215,4 +216,26 @@ footer h2{
 .card.log .card-body form{
   padding: 20px;
   width: 100%;
+}
+
+.comentario{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(109, 109, 109, 0.2);
+}
+.comentario p{
+  padding: 10px 0;
+}
+.comentario img{
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.comentario .info{
+  display: flex;
+  flex-direction: column;
+}
+.container-img-articulo figure img{
+width: 100%;
 }

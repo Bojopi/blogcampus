@@ -21,6 +21,12 @@ const NuevoArticulo = () => {
             [e.target.name]:e.target.value
         })
     };
+    const onChangeImage = e =>{
+        const file = e.target.files[0];
+
+        const image = URL.createObjectURL(file);
+        document.getElementById('imgss').src=image
+    }
     const onSubmit = async (e)=>{
         e.preventDefault();
 
@@ -30,37 +36,50 @@ const NuevoArticulo = () => {
         }
         guardarError(false);
 
-        //registrar nuevo articulo
+        const formdata = new FormData(e.currentTarget)
+        // debugger
 
-        var t = new Date();
-        let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
+        const url = `http://localhost:4000/api/a`
 
-        const url = `http://localhost:4000/api/registrarArticulo`
-
-        const data = {};
-        data.titulo = titulo
-        data.introduccion = introduccion
-        data.contenido = contenido
-        data.fecha = fecha
-        data.img = 'img'
-        data.id_autor = 1
-        
-        let JSO = JSON.stringify(data)
-        await fetch(url, {
-            method: 'POST', // or 'PUT'
-            body: JSO, // data can be `string` or {object}!
-            headers:{
-                'Content-Type': 'application/json'
-            }
+        await fetch(url,{
+            method:'POST',
+            body:formdata
+           
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => alert('insertado correctamente'));
 
-        guardarNuevoArticulo({
-            titulo:'',
-            introduccion:'',
-            contenido:''
-        })
+        //registrar nuevo articulo
+
+        // var t = new Date();
+        // let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
+
+        // const url = `http://localhost:4000/api/registrarArticulo`
+
+        // const data = {};
+        // data.titulo = titulo
+        // data.introduccion = introduccion
+        // data.contenido = contenido
+        // data.fecha = fecha
+        // data.img = 'img'
+        // data.id_autor = 1
+        
+        // let JSO = JSON.stringify(data)
+        // await fetch(url, {
+        //     method: 'POST', // or 'PUT'
+        //     body: JSO, // data can be `string` or {object}!
+        //     headers:{
+        //         'Content-Type': 'application/json'
+        //     }
+        // }).then(res => res.json())
+        // .catch(error => console.error('Error:', error))
+        // .then(response => alert('insertado correctamente'));
+
+        // guardarNuevoArticulo({
+        //     titulo:'',
+        //     introduccion:'',
+        //     contenido:''
+        // })
 
     } 
     
@@ -73,7 +92,7 @@ const NuevoArticulo = () => {
                 <h2>Registro de Nuevo Articulo</h2>
                 <hr/>
                 <div className="container-form">
-                    <form onSubmit={onSubmit} className="form-nuevo-articulo">
+                    <form onSubmit={onSubmit} className="form-nuevo-articulo" encType="multipart/form-data">
                         <h3>Formulario</h3>
                         <div className="form-row">
                             <div className="col col-12">
@@ -85,7 +104,7 @@ const NuevoArticulo = () => {
                         <div className="col col-12">
                                 <i className="material-icons">add</i><label htmlFor="">eliga</label>
                                 <div className="custom-file">
-                                    <input type="file" className="custom-file-input" id="customFile" />
+                                    <input type="file" name="imagen" className="custom-file-input" id="customFile" onChange={onChangeImage} />
                                     <label className="custom-file-label" htmlFor="customFile">Choose file</label>
 
                                 </div>
@@ -115,6 +134,9 @@ const NuevoArticulo = () => {
                     </form>
                     <div className="container-img-articulo">
                         <h3>Imagen</h3>
+                        <figure>
+                            <img className="imgEjemplo" id='imgss' src="" alt=""/>
+                        </figure>
                     </div>
                 </div>       
             </div>

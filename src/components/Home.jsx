@@ -26,7 +26,7 @@ const Home = () => {
                     </div>
                     <div className="container-extra">
 
-                        <h2>Contenido Extra</h2>
+                        <h2>RECOMENDACIONES</h2>
                         <ListaExtras/>
                     </div>
                 </div>
