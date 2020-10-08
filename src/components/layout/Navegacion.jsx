@@ -21,7 +21,7 @@ const Navegacion = () => {
                     <Link className="nav-link" to="/">Entrevistas - Experiencias</Link>
                     </li>
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/">Recursos TICs</Link>
+                    <Link className="nav-link" to="/recursos">Recursos TICs</Link>
                     </li>
                     <li className="nav-item active">
                     <Link className="nav-link" to="/">Recomendaciones</Link>

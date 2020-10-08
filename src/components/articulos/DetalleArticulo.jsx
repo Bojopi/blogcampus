@@ -6,7 +6,7 @@ import Jumbotron from '../layout/Jumbotron';
 import Navegacion from '../layout/Navegacion';
 import Error from '../layout/Error';
 
-import logo from '../../img/campus-virtual.png';
+// import logo from '../../img/campus-virtual.png';
 import Comentario from './Comentario';
 
 import axios from 'axios'
@@ -111,7 +111,10 @@ const DetalleArticulo = ({match}) => {
                         </div>
                         <div className="card">
                             <div className="card-body">
-                                <img src={logo} alt=""/>
+                                {Object.keys(articulo).length === 0
+                                    ?null
+                                    :<img src={`http://localhost:4000/img/${img}.jpg`} alt=""/>
+                                }  
                             </div>
                         </div>
                             <p className="intro">{introduccion}</p>

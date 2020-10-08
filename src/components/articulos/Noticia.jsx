@@ -2,10 +2,10 @@ import React,{Fragment} from 'react'
 
 import {Link} from 'react-router-dom'
 
-import logo from '../../img/campus-virtual.png';
+// import logo from '../../img/campus-virtual.png';
 
 const Noticia = ({noticia}) => {
-    debugger
+    // debugger
     return ( 
         <Fragment>
             <h4>{noticia.titulo}</h4>
@@ -15,7 +15,7 @@ const Noticia = ({noticia}) => {
             </div>
             <div className="card">
                 <div className="card-body">
-                    <img src={logo} alt=""/>
+                    <img src={`http://localhost:4000/img/${noticia.img}.jpg`} alt=""/>
                 </div>
             </div>
             <p className="intro">{noticia.introduccion}</p>
