@@ -367,3 +367,11 @@ width: 100%;
 .card.recur .card-body:hover img{
   opacity: .8;
 }
+/* .btn.btn-primary.active{
+  background: red;
+} */
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #DF1A22;
+  border-color: #005cbf;
+}
