@@ -1,4 +1,4 @@
-import React,{Fragment,useState,useEffect,useContext} from 'react'
+import React,{Fragment,useEffect,useContext} from 'react'
 import Footer from '../layout/Footer'
 import Header from '../layout/Header'
 import Jumbotron from '../layout/Jumbotron'
@@ -10,7 +10,7 @@ import recursoContext from '../../context/recursos/recursoContext'
 const Recursos = () => {
 
     const recursosContext = useContext(recursoContext);
-    const {recursos,recursoscategoria, obtenerRecursos, obtenerRecursosCategoria,categoriaActual}=recursosContext;
+    const {recursos,recursoscategoria,categoria, obtenerRecursos, obtenerRecursosCategoria,categoriaActual}=recursosContext;
 
     useEffect(() => {
         obtenerRecursos();     
@@ -19,8 +19,10 @@ const Recursos = () => {
     // categoriaActual(1)
 
     const onChange = e => {
-        // debugger
-        // alert('ss')
+        if (e.target.value==='0') {
+            categoriaActual(null)
+            return
+        }
         categoriaActual(parseInt(e.target.value));
         obtenerRecursosCategoria(parseInt(e.target.value))
     }
@@ -34,21 +36,26 @@ const Recursos = () => {
                     <h2>Lista de Recursos Tic</h2>
                     <hr/>
                     <h3>Categorias</h3>
-                    <input type="radio" name="sds" id="asda" value="1" onChange={onChange}/>as
-                    <input type="radio" name="sds" id="a" value="2" onChange={onChange}/>aaa
+                    
+                    
+                        {/* <label className="col-sm-12 control-label" for="email-03">Estilo de fuente:</label> */}
+                        <div className="donate">
+                            <label><input type="radio" value='0' onChange={onChange} name="toggle" defaultChecked/><span><strong>TODOS</strong></span></label>
+                            <label><input type="radio" value='1' onChange={onChange} name="toggle"/><span>Comunicacion</span></label>
+                            <label><input type="radio" value='2' onChange={onChange} name="toggle"/><span>Diseño</span></label>
+                            <label><input type="radio" value='3' onChange={onChange} name="toggle"/><span>Presentacion</span></label>
+                        </div>
+                    
+
                     
                     <div className="container-recursos">
-                        {categoriaActual===null
-                            ?null
-                            :recursos.map(recurso => {
+                        {categoria===null
+                            ?recursos.map( recurso =>{
                                 return <Recurso key={recurso.id} recurso={recurso}/>
                             })
-                        }
-                        {categoriaActual!=null
-                        ?recursos.map(recurso => {
-                            return <Recurso key={recurso.id} recurso={recurso}/>
-                        })
-                        :null
+                            :recursoscategoria.map( recurso =>{
+                                return <Recurso key={recurso.id} recurso={recurso}/>
+                            })
                         }
                     </div>
                 </div>
