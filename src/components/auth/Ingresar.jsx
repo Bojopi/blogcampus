@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react';
+import React,{Fragment,useContext,useState} from 'react';
 import Header from '../layout/Header';
 import Logo from '../../img/campus.png'
 import Facebook from '../../img/facebook.png'
@@ -6,7 +6,36 @@ import Twitter from '../../img/twitter.png'
 import Youtube from '../../img/youtube.png'
 import Instagram from '../../img/instagram.png'
 import Footer from '../layout/Footer';
-const Ingresar = () => {
+
+import authContext from '../../context/autenticacion/authContext'
+// import recursoContext from '../../context/recursos/recursoContext'
+const Ingresar = (props) => {
+
+    const AuthContext = useContext(authContext);
+    const { usuarioAutenticado } = AuthContext;
+
+    const [user, guardarUser] = useState({
+        usuario:'',
+        pass:''
+    })
+
+    const { usuario,pass } =user
+
+    const onChange = e =>{
+        guardarUser({
+            ...user,
+            [e.target.name]:e.target.value
+        })
+    }
+
+    const onSubmit = async e =>{
+        e.preventDefault();
+        usuarioAutenticado(usuario,pass)
+
+        props.history.push('/');
+
+    }
+
     return ( 
         <Fragment>
             <Header />
@@ -20,15 +49,15 @@ const Ingresar = () => {
                             Ingresar
                         </div>
                         <div className="card-body">
-                        <form>
+                        <form onSubmit={onSubmit}>
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1">Usuario:</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                                <input type="text" name="usuario" value={usuario} onChange={onChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                                 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="exampleInputPassword1">Contraseña:</label>
-                                <input type="password" className="form-control" id="exampleInputPassword1"/>
+                                <input type="password" name="pass" value={pass} onChange={onChange} className="form-control" id="exampleInputPassword1"/>
                             </div>
                             
                             <button type="submit" className="btn btn-success btn-block">Ingresar</button>

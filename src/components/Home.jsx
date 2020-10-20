@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useContext,useEffect } from 'react';
 
 import {Link} from 'react-router-dom';
 
@@ -8,8 +8,17 @@ import Navegacion from './layout/Navegacion';
 import Footer from './layout/Footer';
 import ListaNoticias from './articulos/ListaNoticias';
 import ListaExtras from './articulos/ListaExtras';
+import AuthContext from '../context/autenticacion/authContext';
 
 const Home = () => {
+    const authContext = useContext(AuthContext);
+    const { usuAuth } = authContext
+
+    useEffect(() => {
+        usuAuth()
+        
+    },[])
+
     return ( 
         <Fragment>
             <Header />
