@@ -12,6 +12,7 @@ import RecursoState from './context/recursos/recursoState'
 import AuthState from './context/autenticacion/authState';
 import tokenAuth from './config/tokenAuth'
 import NuevoRecurso from './components/recursos/NuevoRecurso';
+import Entrevistas from './components/entrevistas/Entrevistas';
 
 //Revisar si tenemos un token
 const token = localStorage.getItem('token');
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/recursos" component={Recursos}/>
             <Route exact path="/detalle-recurso-tic/:id" component={DetalleRecurso}/>
             <Route exact path="/nuevo-recurso" component={NuevoRecurso}/>
+            <Route exact path="/entrevistas" component={Entrevistas}/>
           </Switch>
         </Router>
       </AuthState>

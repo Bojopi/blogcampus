@@ -18,7 +18,7 @@ const Navegacion = () => {
                     <Link className="nav-link" to="/" >Blog<span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/">Entrevistas - Experiencias</Link>
+                    <Link className="nav-link" to="/entrevistas">Entrevistas - Experiencias</Link>
                     </li>
                     <li className="nav-item active">
                     <Link className="nav-link" to="/recursos">Recursos TICs</Link>
