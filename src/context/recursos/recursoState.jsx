@@ -4,6 +4,7 @@ import recursoContext from './recursoContext';
 import recursoReducer from './recursoReducer';
 
 import { OBTENER_RECURSOS , RECURSOS_CATEGORIA, CATEGORIA_ACTUAL } from '../../types'
+import axios from 'axios'
 
 const RecursoState = props => {
     const initialState = {
@@ -39,6 +40,31 @@ const RecursoState = props => {
         })
 
     }
+    const registrarRecurso = async recurso =>{
+        await axios.post('http://localhost:4000/api/registrarVenta', {
+            // fecha_venta: fecha,
+            // precio: parseInt(total),
+            // tipo_pago:'Al Contado',
+            // matricula:'LGD-2569',
+            // id_vendedor:1,
+            // id_cliente:parseInt(venta.id_cliente),
+            // id_vehiculo:parseInt(venta.id_vehiculo)
+        })
+        .then(function (response) {
+            if(response.status===200){
+                alert('Venta Registrada')
+                
+            }else{
+                
+                alert('Error al insertar')
+            }
+            // console.log(response.status);
+        })
+        // dispatch({
+        //     type:CATEGORIA_ACTUAL
+        // })
+
+    }
 
     return ( 
         <recursoContext.Provider value={{
@@ -47,7 +73,8 @@ const RecursoState = props => {
             categoria:state.categoria,
             obtenerRecursos,
             obtenerRecursosCategoria,
-            categoriaActual
+            categoriaActual,
+            registrarRecurso
         }}>
             {props.children}
 

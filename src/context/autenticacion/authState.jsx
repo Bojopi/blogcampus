@@ -6,7 +6,7 @@ import AuthReducer from './authReducer'
 import clienteAxios from '../../config/axios'
 import tokenAuth from '../../config/tokenAuth'
 
-import { REGISTRO_ERROR, REGISTRO_EXITOSO, OBTENER_USUARIO, LOGIN_EXITOSO, LOGIN_ERROR, CERRAR_SESION } from '../../types'
+import { OBTENER_USUARIO, LOGIN_ERROR } from '../../types'
 
 const AuthState = props => {
     const initialState = {

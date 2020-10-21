@@ -10,7 +10,7 @@ const Recurso = ({recurso}) => {
                 <div className="parte-atras">
                     <p><u>{recurso.titulo}</u></p>
                     <br/>
-                    <p>{recurso.descripcion}</p>
+                    <p>{recurso.descripcion.substr(0,50)}...</p>
                     <Link to={`/detalle-recurso-tic/${recurso.id}`} className="btn btn-info">Ver mas</Link>
                 </div>
             </div>

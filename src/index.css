@@ -126,6 +126,7 @@ main .container.not{
 .container-form{
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  column-gap: 15px;
 }
 .container-detalle{
   display: grid;
@@ -418,4 +419,20 @@ input[type=radio]{
 .donate input:checked+span {
   background-color: var(--rojo2);
   color: #F7F7F7;
+}
+.container-paginacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.btn.btn-primary.anterior{
+  margin-right: 15px;
+}
+.nav-item.active{
+  border-right: 1px solid red;
+}
+.nav-item.active:hover{
+  
+  background: rgba(255, 87, 87, 0.205)
 }

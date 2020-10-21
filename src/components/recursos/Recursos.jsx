@@ -1,4 +1,7 @@
 import React,{Fragment,useEffect,useContext} from 'react'
+
+import {Link} from 'react-router-dom'
+
 import Footer from '../layout/Footer'
 import Header from '../layout/Header'
 import Jumbotron from '../layout/Jumbotron'
@@ -6,6 +9,7 @@ import Navegacion from '../layout/Navegacion'
 import Recurso from './Recurso'
 
 import recursoContext from '../../context/recursos/recursoContext'
+
 
 const Recursos = () => {
 
@@ -34,6 +38,7 @@ const Recursos = () => {
             <main>
                 <div className="container recu">
                     <h2>Lista de Recursos Tic</h2>
+                    <Link className="btn btn-danger" to='/nuevo-recurso'>Agregar Nuevo Recurso</Link>
                     <hr/>
                     <h3>Categorias</h3>
                     

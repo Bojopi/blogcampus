@@ -30,8 +30,14 @@ const NuevoArticulo = () => {
     const onChangeImage = e => {
         
         const file = e.target.files[0];
-        const image = URL.createObjectURL(file);
-        document.getElementById('imgss').src=image;
+        try {
+            const image = URL.createObjectURL(file);
+            document.getElementById('imgss').src=image;
+            
+        } catch (error) {
+            console.log(error)
+            document.getElementById('imgss').src='';
+        }
     }
     
     const enviarImagen = async (formdata)=>{
