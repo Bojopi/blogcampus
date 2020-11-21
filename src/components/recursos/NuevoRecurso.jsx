@@ -157,14 +157,16 @@ const NuevoRecurso = () => {
                     </form>
                     <div className="container-img-recurso">
                         <h3>Vista Previa</h3>
-                        <div className="card">
+                        <div className="card sombra">
                             <div className="card-header"></div>
                             <div className="card-body">
-                                <img id="imgLogo" src="" alt=""/>
+                                <figure>
+                                    <img id="imgLogo" src="" alt=""/>
+                                </figure>
                                 <div className="parte-atras">
                                     <p><u>{titulo}</u></p>
                                     <br/>
-                                    <p>{descripcion}</p>
+                                    <p>{descripcion.substr(0,50)}...</p>
                                     <button className="btn btn-info">Ver mas</button>
                                 </div>
                             </div>

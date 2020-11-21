@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
 import Logo from '../../img/utep.png'
 
@@ -15,17 +15,17 @@ const Navegacion = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/" >Blog<span className="sr-only">(current)</span></Link>
+                    <NavLink activeStyle={{color:'red'}}  className="nav-link" exact to="/" >Blog<span className="sr-only">(current)</span></NavLink>
                     </li>
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/entrevistas">Entrevistas - Experiencias</Link>
+                    <NavLink activeStyle={{color:'red'}} className="nav-link" exact to="/entrevistas">Entrevistas - Experiencias</NavLink>
                     </li>
                     <li className="nav-item active">
-                    <Link className="nav-link" to="/recursos">Recursos TICs</Link>
+                    <NavLink activeStyle={{color:'red'}} className="nav-link" exact to="/recursos">Recursos TICs</NavLink>
                     </li>
-                    <li className="nav-item active">
-                    <Link className="nav-link" to="/">Recomendaciones</Link>
-                    </li>
+                    {/* <li className="nav-item active">
+                    <NavLink activeStyle={{color:'red'}} className="nav-link" exact to="/">Recomendaciones</NavLink>
+                    </li> */}
                     
                 </ul>
                     <div className="container-login">
