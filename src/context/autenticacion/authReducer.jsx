@@ -5,14 +5,14 @@ export default (state, action) => {
         
         case LOGIN_ERROR:
             return{
-                ...state,
-                
+                ...state,               
             }
         case OBTENER_USUARIO:
-            localStorage.setItem('token',action.payload.token);
+            // localStorage.setItem('token',action.payload.token);
+            debugger
             return{
                 ...state,
-                usuario:action.payload.datos
+                usuario:action.payload
             }
         default:
             return state;

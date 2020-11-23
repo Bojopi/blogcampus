@@ -28,21 +28,29 @@ const AuthState = props => {
     }
 
     const usuarioAutenticado = async (usu,pass) =>{
-        // const token = localStorage.getItem('token');
-        // if (token) {
-        //     // TODO: funcion para enviar el token por headers
-        //     tokenAuth(token)
-        // }
         try {
-            const respuesta = await clienteAxios.get(`/api/autenticacion/${usu}/${pass}`)
-            // debugger
+            const respuesta = await clienteAxios.get(`http://localhost:4000/api/autenticacion/${usu}/${pass}`)
+            debugger
             console.log(respuesta)
+            if (Object.keys(respuesta.data).length > 0) {
 
-            dispatch({
-                type: OBTENER_USUARIO,
-                payload:respuesta.data
-            });
-            usuAuth();
+                let TOKEN = respuesta.data.token
+                await localStorage.setItem('token',TOKEN)
+                let base64Url = TOKEN.split('.')[1];
+                let base64= base64Url.replace('-', '+').replace('_','/');
+                const datos = JSON.parse(window.atob(base64))
+                // debugger
+
+                dispatch({
+                    type: OBTENER_USUARIO,
+                    payload:datos.json[0]
+                });
+                
+            }else{
+                console.log('usuario incorrecto')
+            }
+
+            
         } catch (error) {
             dispatch({
                 type:LOGIN_ERROR
@@ -69,6 +77,8 @@ const AuthState = props => {
     //     }
     // }
 
+       
+
     return(
         <AuthContext.Provider value={{
             token:state.token,
@@ -76,7 +86,7 @@ const AuthState = props => {
             usuario:state.usuario,
             mensaje:state.mensaje,
             usuarioAutenticado,
-            usuAuth
+            // usuAuth
         }}>
             {props.children}
 
