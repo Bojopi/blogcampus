@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 // import logo from '../../img/campus-virtual.png';
 
 const Noticia = ({noticia}) => {
-    // debugger
+    debugger
     return ( 
         <Fragment>
             <h4>{noticia.titulo}</h4>
