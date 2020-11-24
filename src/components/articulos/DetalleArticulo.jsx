@@ -1,7 +1,4 @@
 import React,{Fragment,useEffect,useState} from 'react';
-
-import Header from '../layout/Header';
-import Footer from '../layout/Footer';
 import Jumbotron from '../layout/Jumbotron';
 import Navegacion from '../layout/Navegacion';
 import Error from '../layout/Error';
@@ -93,7 +90,6 @@ const DetalleArticulo = ({match}) => {
 
     return ( 
         <Fragment>
-            <Header />
             <Jumbotron />
             <Navegacion />
             <div className="container nuevoar">
@@ -157,7 +153,6 @@ const DetalleArticulo = ({match}) => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </Fragment>
      );
 }

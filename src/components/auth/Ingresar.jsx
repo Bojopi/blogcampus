@@ -1,14 +1,11 @@
 import React,{Fragment,useContext,useState} from 'react';
-import Header from '../layout/Header';
 import Logo from '../../img/campus.png'
 import Facebook from '../../img/facebook.png'
 import Twitter from '../../img/twitter.png'
 import Youtube from '../../img/youtube.png'
 import Instagram from '../../img/instagram.png'
-import Footer from '../layout/Footer';
 
 import authContext from '../../context/autenticacion/authContext'
-// import recursoContext from '../../context/recursos/recursoContext'
 const Ingresar = (props) => {
 
     const AuthContext = useContext(authContext);
@@ -38,7 +35,6 @@ const Ingresar = (props) => {
 
     return ( 
         <Fragment>
-            <Header />
             <div className="jumbotron jumbotron-fluid">
             <div className="container jumbo">
                 <div className="container-logo">
@@ -89,8 +85,6 @@ const Ingresar = (props) => {
                 </div>
             </div>
         </div>
-
-        <Footer/>
         </Fragment>
      );
 }

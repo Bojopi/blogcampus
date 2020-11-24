@@ -2,26 +2,14 @@ import React, { Fragment} from 'react';
 
 import {Link} from 'react-router-dom';
 
-import Header from './layout/Header';
 import Jumbotron from './layout/Jumbotron';
 import Navegacion from './layout/Navegacion';
-import Footer from './layout/Footer';
 import ListaNoticias from './articulos/ListaNoticias';
 import ListaExtras from './articulos/ListaExtras';
-// import AuthContext from '../context/autenticacion/authContext';
 
 const Home = () => {
-    // const authContext = useContext(AuthContext);
-    // const { usuAuth } = authContext
-
-    // useEffect(() => {
-    //     usuAuth()
-        
-    // },[usuAuth])
-
     return ( 
         <Fragment>
-            <Header />
             <Jumbotron />
             <Navegacion />
             <main>
@@ -40,8 +28,6 @@ const Home = () => {
                     </div>
                 </div>
             </main>
-            <Footer />
-
         </Fragment>
      );
 }

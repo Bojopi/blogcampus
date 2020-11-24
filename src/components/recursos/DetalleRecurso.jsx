@@ -1,6 +1,4 @@
 import React,{Fragment,useState,useEffect} from 'react';
-import Footer from '../layout/Footer';
-import Header from '../layout/Header'
 import Jumbotron from '../layout/Jumbotron';
 import Navegacion from '../layout/Navegacion';
 
@@ -21,7 +19,6 @@ const DetalleRecurso = ({match}) => {
 
     return ( 
         <Fragment>
-            <Header/>
             <Jumbotron/>
             <Navegacion/>
             <main>
@@ -47,7 +44,6 @@ const DetalleRecurso = ({match}) => {
                     </div>
                 </div>
             </main>
-            <Footer/>
         </Fragment>
      );
 }

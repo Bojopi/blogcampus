@@ -2,8 +2,6 @@ import React,{Fragment,useEffect,useContext} from 'react'
 
 import {Link} from 'react-router-dom'
 
-import Footer from '../layout/Footer'
-import Header from '../layout/Header'
 import Jumbotron from '../layout/Jumbotron'
 import Navegacion from '../layout/Navegacion'
 import Recurso from './Recurso'
@@ -32,7 +30,6 @@ const Recursos = () => {
     }
     return ( 
         <Fragment>
-            <Header/>
             <Jumbotron />
             <Navegacion/>
             <main>
@@ -65,7 +62,6 @@ const Recursos = () => {
                     </div>
                 </div>
             </main>
-            <Footer/>
         </Fragment>
      );
 }

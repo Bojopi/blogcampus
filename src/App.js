@@ -10,15 +10,12 @@ import Recursos from './components/recursos/Recursos';
 import DetalleRecurso from './components/recursos/DetalleRecurso'
 import RecursoState from './context/recursos/recursoState'
 import AuthState from './context/autenticacion/authState';
-import tokenAuth from './config/tokenAuth'
+// import tokenAuth from './config/tokenAuth'
 import NuevoRecurso from './components/recursos/NuevoRecurso';
 import Entrevistas from './components/entrevistas/Entrevistas';
 
-//Revisar si tenemos un token
-const token = localStorage.getItem('token');
-if (token) {
-  tokenAuth(token);
-}
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 
 function App() {
   
@@ -26,6 +23,7 @@ function App() {
     <RecursoState>
       <AuthState>
         <Router>
+          <Header/>
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/ingresar" component={Ingresar}/>
@@ -36,6 +34,7 @@ function App() {
             <Route exact path="/nuevo-recurso" component={NuevoRecurso}/>
             <Route exact path="/entrevistas" component={Entrevistas}/>
           </Switch>
+          <Footer/>
         </Router>
       </AuthState>
     </RecursoState>

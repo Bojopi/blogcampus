@@ -1,6 +1,4 @@
 import React,{Fragment, useState} from 'react';
-import Header from '../layout/Header'
-import Footer from '../layout/Footer'
 import Error from '../layout/Error'
 
 import {Link} from 'react-router-dom'
@@ -106,7 +104,6 @@ const NuevoArticulo = () => {
 
     return(
         <Fragment>
-            <Header />
             <div className="container nuevoar">
                 <br/>
                 <h2>Registro de Nuevo Articulo</h2>
@@ -174,7 +171,6 @@ const NuevoArticulo = () => {
                     </div>
                 </div>       
             </div>
-            <Footer />
         </Fragment>
     )
 } 
