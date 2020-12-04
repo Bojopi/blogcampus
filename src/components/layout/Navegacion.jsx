@@ -3,6 +3,8 @@ import {Link, NavLink} from 'react-router-dom'
 
 import Logo from '../../img/utep.png'
 
+import '../css/sidebar.css'
+
 
 const Navegacion = () => {
     return ( 

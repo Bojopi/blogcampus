@@ -27,7 +27,7 @@ const Ingresar = (props) => {
 
     const onSubmit = async e =>{
         e.preventDefault();
-        usuarioAutenticado(usuario,pass)
+        await usuarioAutenticado(usuario,pass)
 
         props.history.push('/');
 

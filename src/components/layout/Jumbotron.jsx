@@ -6,6 +6,8 @@ import Twitter from '../../img/twitter.png'
 import Youtube from '../../img/youtube.png'
 import Instagram from '../../img/instagram.png'
 
+import '../css/jumbotron.css'
+
 const Jumbotron = () => {
     return ( 
         <div className="jumbotron jumbotron-fluid">

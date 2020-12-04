@@ -1,0 +1,36 @@
+@media screen and (max-width: 479px){
+    main .container.not .container-extra .card .card-header.extra{
+        font-size: 16px;
+    }
+    main .container.not .container-extra .card .card-body{
+        padding: 5px 20px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 599px){
+    main .container.not .container-extra .card .card-header.extra{
+        font-size: 16px;
+    }
+    main .container.not .container-extra .card .card-body{
+        padding: 5px 20px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 767px){
+    main .container.not .container-extra .card .card-header.extra{
+        font-size: 16px;
+    }
+    main .container.not .container-extra .card .card-body{
+        padding: 5px 20px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1023px){
+    main .container.not .container-extra .card .card-header.extra{
+        font-size: 16px;
+    }
+    main .container.not .container-extra .card .card-body{
+        padding: 5px 20px;
+        font-size: 16px;
+    }
+}

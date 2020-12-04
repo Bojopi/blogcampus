@@ -1,5 +1,7 @@
 import React,{Fragment} from 'react'
 
+import '../css/extras.css'
+
 const ListaExtras = () => {
     return ( 
         <Fragment>

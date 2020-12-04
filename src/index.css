@@ -543,4 +543,20 @@ input[type=radio]{
   font-size: 12px;
   margin: 0;
 }
-   
+
+footer{
+  position: relative;
+}
+.footer-feet{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #606c77;
+}
+.footer-feet h4{
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 20px 0;
+}

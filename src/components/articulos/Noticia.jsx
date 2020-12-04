@@ -5,10 +5,10 @@ import {Link} from 'react-router-dom'
 // import logo from '../../img/campus-virtual.png';
 
 const Noticia = ({noticia}) => {
-    debugger
+    // debugger
     return ( 
         <Fragment>
-            <h4>{noticia.titulo}</h4>
+            <h4 className="titulo-noticia">{noticia.titulo}</h4>
             <div className="info-noticia">
                 <p>{noticia.Autor} </p>
                 <p> {noticia.fecha.substr(0,10)} </p>

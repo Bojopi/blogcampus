@@ -1,0 +1,100 @@
+@media screen and (max-width: 479px){
+    .jumbotron{
+        background-size: cover;
+        padding: 0;
+        min-height: initial;
+    }
+    .jumbotron .container.jumbo{
+        display: initial;
+    }
+    .jumbotron .container.jumbo .container-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .jumbotron .container.jumbo .container-logo h4{
+        padding: 0 10px;
+        text-align: center;
+        font-size: 14px !important;
+    }
+    .jumbotron .container.jumbo .container-logo .lead{
+        text-align: center;
+        padding: 0 20px;
+    }
+    .jumbotron .container.jumbo .container-redes h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .jumbotron .container.jumbo .container-redes img{
+        width: 40px !important;
+    }
+    
+}
+@media screen and (max-width: 599px){
+    .jumbotron{
+        background-size: cover;
+        padding: 10px 0;
+        min-height: initial;
+    }
+    .jumbotron .container.jumbo{
+        display: initial;
+    }
+    .jumbotron .container.jumbo .container-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .jumbotron .container.jumbo .container-logo .lead{
+        text-align: center;
+        padding: 0 20px;
+    }
+    .jumbotron .container.jumbo .container-redes h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .jumbotron .container.jumbo .container-redes img{
+        width: 60px;
+    }
+}
+@media screen and (max-width: 767px){
+    .jumbotron{
+        background-size: cover;
+        padding: 10px 0;
+        min-height: initial;
+    }
+    .jumbotron .container.jumbo{
+        display: initial;
+    }
+    .jumbotron .container.jumbo .container-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .jumbotron .container.jumbo .container-logo h4{
+        font-size: 20px;
+    }
+    .jumbotron .container.jumbo .container-logo .lead{
+        text-align: left;
+        padding: 0 20px;
+    }
+    .jumbotron .container.jumbo .container-redes h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .jumbotron .container.jumbo .container-redes img{
+        width: 60px;
+    }
+}
+@media screen and (max-width: 1023px){
+    .jumbotron{
+        background-size: cover;
+        min-height: 300px;
+    }
+    .jumbotron .container.jumbo{
+        grid-template-columns: 60% 40%;
+        column-gap: 10px;
+    }
+}

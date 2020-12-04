@@ -1,4 +1,4 @@
-import React,{Fragment,useEffect,useContext} from 'react'
+import React,{Fragment,useEffect,useContext,useState} from 'react'
 
 import {Link} from 'react-router-dom'
 
@@ -13,8 +13,36 @@ const Recursos = () => {
 
     const recursosContext = useContext(recursoContext);
     const {recursos,recursoscategoria,categoria, obtenerRecursos, obtenerRecursosCategoria,categoriaActual}=recursosContext;
+    const [admin, setAdmin] = useState(false);
 
     useEffect(() => {
+
+        const verificarToken = async () => {
+            try {
+                if (await localStorage.getItem('token')==undefined) {
+                    setAdmin(false);
+                    return;
+                }
+                let token = await localStorage.getItem('token')
+                let base64Url = token.split('.')[1];
+                let base64= base64Url.replace('-', '+').replace('_','/');
+                const datos = JSON.parse(window.atob(base64))
+
+                let date= new Date();
+                let fecha_actual = Math.floor(date.getTime()/1000);
+
+                
+                if (fecha_actual>datos.exp) {
+                    setAdmin(false);
+                    return
+                }
+                setAdmin(true);
+                
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        verificarToken();
         obtenerRecursos();     
     }, [])
 
@@ -35,7 +63,11 @@ const Recursos = () => {
             <main>
                 <div className="container recu">
                     <h2>Lista de Recursos Tic</h2>
-                    <Link className="btn btn-danger" to='/nuevo-recurso'>Agregar Nuevo Recurso</Link>
+                    {admin
+                        ?<Link className="btn btn-danger" to='/nuevo-recurso'>Agregar Nuevo Recurso</Link>
+                        :null
+                    }
+                    
                     <hr/>
                     <h3>Categorias</h3>
                     

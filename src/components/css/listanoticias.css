@@ -1,0 +1,84 @@
+@media screen and (max-width: 479px){
+    main .container.not .container-noticias .titulo-noticia {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    main .container.not .container-noticias .info-noticia{
+        margin: 10px 0;
+    }
+    main .container.not .container-noticias .info-noticia p{
+        font-size: 12px;
+    }
+    main .container.not .container-noticias .intro{
+        font-size: 14px;
+        padding: 5px 0;
+        margin: 0;
+    }
+    main .container.not .container-noticias .btn.btn-info{
+        margin: 0;
+        font-size: 12px;
+    }
+    main .container.not .container-noticias .container-paginacion{
+        padding: 0;
+    }
+    main .container.not .container-noticias .container-paginacion .btn.btn-primary{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 599px){
+    main .container.not .container-noticias .titulo-noticia {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+    main .container.not .container-noticias .info-noticia{
+        margin: 10px 0;
+    }
+    main .container.not .container-noticias .info-noticia p{
+        font-size: 12px;
+    }
+    main .container.not .container-noticias .intro{
+        font-size: 14px;
+        padding: 5px 0;
+        margin: 0;
+    }
+    main .container.not .container-noticias .btn.btn-info{
+        margin: 0;
+        font-size: 16px;
+    }
+    main .container.not .container-noticias .container-paginacion{
+        padding: 0;
+    }
+    main .container.not .container-noticias .container-paginacion .btn.btn-primary{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 767px){
+    
+}
+@media screen and (max-width: 1023px){
+    main .container.not .container-noticias .titulo-noticia {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+    main .container.not .container-noticias .info-noticia{
+        margin: 10px 0;
+    }
+    main .container.not .container-noticias .info-noticia p{
+        font-size: 12px;
+    }
+    main .container.not .container-noticias .intro{
+        font-size: 14px;
+        padding: 5px 0;
+        margin: 0;
+    }
+    main .container.not .container-noticias .btn.btn-info{
+        margin: 0;
+        font-size: 16px;
+    }
+    main .container.not .container-noticias .container-paginacion{
+        padding: 0;
+    }
+    
+}

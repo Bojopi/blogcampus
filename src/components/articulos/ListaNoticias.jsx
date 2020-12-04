@@ -1,5 +1,7 @@
-import React,{useState , Fragment, useEffect} from 'react'
+import React,{useState , useEffect} from 'react'
 import Noticia from './Noticia';
+
+import '../css/listanoticias.css'
 
 const ListaNoticias = () => {
 
@@ -29,7 +31,7 @@ const ListaNoticias = () => {
     }
 
     return ( 
-        <Fragment>
+        <>
             <hr/>
             { listanoticias.map(noticia => {
                 return <Noticia key={noticia.id} noticia={noticia}/>
@@ -47,7 +49,7 @@ const ListaNoticias = () => {
                 
 
             </div>
-        </Fragment>
+        </>
      );
 }
  

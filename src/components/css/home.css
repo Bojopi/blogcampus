@@ -1,0 +1,108 @@
+@media screen and (max-width: 479px){
+     main{
+         background: white;
+         padding: 0 15px;
+     }
+     main .container.not{
+         display: initial;
+        }
+    main .container.not .container-noticias h2{
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+    main .container.not .container-extra{
+        padding: 0;
+    }
+    main .container.not .container-extra h2{
+        font-size: 20px;
+        margin: 20px 0;
+        /* text-align: center; */
+    }
+    
+}
+@media screen and (max-width: 599px){
+    main{
+        background: white;
+        padding: 0 15px;
+    }
+    main .container.not{
+        display: initial;
+       }
+   main .container.not .container-noticias h2{
+       margin: 0;
+       font-size: 20px;
+       text-align: center;
+   }
+   main .container.not .container-extra{
+       padding: 0;
+   }
+   main .container.not .container-extra h2{
+       font-size: 20px;
+       margin: 20px 0;
+       /* text-align: center; */
+   }
+}
+@media screen and (max-width: 767px){
+    main{
+        background: white;
+        padding: 0 15px;
+    }
+    main .container.not{
+        display: initial;
+    }
+   main .container.not .container-noticias h2{
+       margin: 0;
+       font-size: 30px;
+       text-align: left;
+   }
+   main .container.not .container-extra{
+       padding: 0;
+   }
+   main .container.not .container-extra h2{
+       font-size: 30px;
+       margin: 20px 0;
+       /* text-align: center; */
+   }
+}
+@media screen and (max-width: 1023px){
+    main{
+        background: white;
+        padding: 0 15px;
+    }
+    main .container.not .container-extra{
+        padding: 0;
+    }
+    main .container.not .container-noticias h2{
+        font-size: 25px;
+        text-align: left;
+    }
+    main .container.not{
+        grid-template-columns: 60% 40%;
+    }
+    main .container.not .container-extra h2{
+        font-size: 25px;
+        /* text-align: center; */
+    }
+}
+
+
+/*
+
+@media screen and (max-width: 479px){
+     
+}
+@media screen and (max-width: 599px){
+   
+}
+@media screen and (max-width: 767px){
+    
+}
+@media screen and (max-width: 1023px){
+    
+}
+@media screen and (max-width: 1023px){
+    
+}
+
+*/
