@@ -1,0 +1,85 @@
+@media screen and (max-width: 1023px){
+    main .container.recu .container-recursos{
+        grid-template-columns: repeat(5,1fr);
+    }
+    .card.recur .card-body .parte-atras{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 991px){
+    .container.recu{
+        padding: 0px;
+    }
+    .container.recu h2 {
+        font-size: 25px;
+        padding: 10px 0;
+    }
+    main .container.recu .container-recursos{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .card.recur .card-body .parte-atras{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 767px){
+    .container.recu{
+        padding: 0px;
+    }
+    .container.recu h2 {
+        font-size: 25px;
+        padding: 10px 0;
+    }
+    main .container.recu .container-recursos{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card.recur .card-body .parte-atras{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width: 599px){
+    .container.recu{
+        padding: 0px;
+    }
+    .container.recu h2 {
+        font-size: 25px;
+        padding: 10px 0;
+    }
+    main .container.recu .container-recursos{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card.recur .card-body .parte-atras{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 479px){
+    .container.recu{
+        padding: 0px;
+    }
+    .container.recu h2 {
+        font-size: 25px;
+        padding: 10px 0;
+    }
+    .donate label span {
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+        display: block;
+    }
+    main .container.recu .container-recursos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card.recur .card-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .card.recur .card-body .parte-atras{
+        font-size: 12px;
+    }
+}
+
+

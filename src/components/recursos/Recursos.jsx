@@ -8,6 +8,7 @@ import Recurso from './Recurso'
 
 import recursoContext from '../../context/recursos/recursoContext'
 
+import '../css/recursos.css'
 
 const Recursos = () => {
 

@@ -1,0 +1,83 @@
+@media screen and (max-width: 479px){
+    .container-detalle{
+        display: initial;
+    }
+    .container-detalle .info h2{
+        font-size: 16px;
+    }
+    .container-detalle .info .info-noticia p{
+        font-size: 12px;
+    }
+    .container-detalle .info .intro{
+        padding: 5px;
+        font-size: 14px;
+    }
+    .container-detalle .info .container-comentarios h3{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .container-detalle .info .container-comentarios .comentario{
+        grid-template-columns: 25% 75%;
+        margin-bottom: 15px;
+        padding: 0;
+    }
+    .container-detalle .info .container-comentarios .comentario p{
+        font-size: 12px;
+    }
+    .container-detalle .info .container-comentarios .comentario img{
+        width: 40px;
+    }
+    .container-detalle .info .container-comentarios .comentario .info{
+        font-size: 12px;
+    }
+    .container-detalle .info .container-comentarios .form-nuevo-articulo{
+        padding: 0;
+    }
+    .container-detalle .info .container-comentarios .form-nuevo-articulo h3{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    
+}
+@media screen and (max-width: 599px){
+    .container-detalle{
+        display: initial;
+    }
+    .container-detalle .info h2{
+        font-size: 20px;
+    }
+    .container-detalle .info .intro{
+        padding: 5px;
+        font-size: 16px;
+        margin: 0;
+    }
+    .container-detalle .info .container-comentarios .comentario{
+        grid-template-columns: 20% 80%;
+        margin-bottom: 15px;
+        padding: 0;
+    }
+    .container-detalle .info .container-comentarios .form-nuevo-articulo{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 767px){
+    .container-detalle{
+        display: initial;
+    }
+    .container-detalle .info h2{
+        font-size: 20px;
+    }
+    .container-detalle .info .container-comentarios .comentario{
+        grid-template-columns: 15% 85%;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 1023px){
+    .container-detalle .info h2{
+        font-size: 20px;
+    }
+    .container-detalle .info .container-comentarios .comentario{
+        grid-template-columns: 15% 85%;
+        margin-bottom: 15px;
+    }
+}

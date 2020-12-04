@@ -8,6 +8,8 @@ import Comentario from './Comentario';
 
 import axios from 'axios'
 
+import '../css/darticulo.css'
+
 const DetalleArticulo = ({match}) => {
 
     const [comentarios,guardarComentarios]=useState([]);
@@ -126,7 +128,7 @@ const DetalleArticulo = ({match}) => {
 
                         <form onSubmit={onSubmit} className="form-nuevo-articulo">
                             <br/>
-                            <h3>Formulario</h3>
+                            <h3>Deje su comentario</h3>
                             <div className="form-row">
                                 <div className="col col-12">
                                     <i className="material-icons">face</i><label htmlFor="">Nombre</label>

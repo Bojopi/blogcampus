@@ -261,7 +261,7 @@ width: 100%;
   padding: 20px 0;
 }
 
-.container-recursos{
+main .container.recu .container-recursos{
   display: grid;
   grid-template-columns: repeat(5,1fr);
   column-gap: 15px;
@@ -560,3 +560,5 @@ footer{
   margin: 0;
   padding: 20px 0;
 }
+
+
