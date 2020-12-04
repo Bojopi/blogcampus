@@ -6,6 +6,8 @@ import Youtube from '../../img/youtube.png'
 import Instagram from '../../img/instagram.png'
 
 import authContext from '../../context/autenticacion/authContext'
+
+import '../css/login.css'
 const Ingresar = (props) => {
 
     const AuthContext = useContext(authContext);

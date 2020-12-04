@@ -1,0 +1,21 @@
+@media screen and (max-width: 1023px){
+    .card.log{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 767px){
+    .card.log{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 599px){
+    .card.log{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 479px){
+     .card.log{
+         width: 90%;
+     }
+}
