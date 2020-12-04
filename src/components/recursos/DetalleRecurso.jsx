@@ -2,6 +2,8 @@ import React,{Fragment,useState,useEffect} from 'react';
 import Jumbotron from '../layout/Jumbotron';
 import Navegacion from '../layout/Navegacion';
 
+import '../css/drecurso.css'
+
 const DetalleRecurso = ({match}) => {
 
     const [recurso,guardarRecurso]=useState({})

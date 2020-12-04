@@ -4,7 +4,7 @@ import AuthContext from './authContext'
 import AuthReducer from './authReducer'
 
 import clienteAxios from '../../config/axios'
-import tokenAuth from '../../config/tokenAuth'
+// import tokenAuth from '../../config/tokenAuth'
 
 import { OBTENER_USUARIO, LOGIN_ERROR } from '../../types'
 
@@ -17,15 +17,6 @@ const AuthState = props => {
     }
 
     const [state ,dispatch] = useReducer(AuthReducer,initialState);
-
-    //las funciones
-
-    const usuAuth = async () =>{
-        const token = localStorage.getItem('token')
-        if (token) {
-            tokenAuth(token)
-        }
-    }
 
     const usuarioAutenticado = async (usu,pass) =>{
         try {
@@ -59,26 +50,6 @@ const AuthState = props => {
         }
     }
 
-    // const iniciarSession = async datos =>{
-    //     try {
-    //         const respuesta = await clienteAxios.get(`/api/autenticacion/${usu}/${pass}`)
-    //         debugger
-    //         console.log(respuesta)
-
-    //         dispatch({
-    //             type: OBTENER_USUARIO,
-    //             payload:respuesta.data.datos
-    //         })
-    //     } catch (error) {
-    //         dispatch({
-    //             type:LOGIN_ERROR
-    //         })
-
-    //     }
-    // }
-
-       
-
     return(
         <AuthContext.Provider value={{
             token:state.token,
@@ -86,7 +57,6 @@ const AuthState = props => {
             usuario:state.usuario,
             mensaje:state.mensaje,
             usuarioAutenticado,
-            // usuAuth
         }}>
             {props.children}
 
