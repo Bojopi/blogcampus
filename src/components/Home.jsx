@@ -61,7 +61,7 @@ const Home = () => {
                     <div className="container-extra">
 
                         <h2>RECOMENDACIONES</h2>
-                        <ListaExtras/>
+                        {/* <ListaExtras/> */}
                     </div>
                 </div>
             </main>

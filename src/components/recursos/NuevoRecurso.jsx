@@ -1,10 +1,10 @@
-import React,{Fragment,useState} from 'react'
+import React,{Fragment,useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import Error from '../layout/Error'
 
 import axios from 'axios'
 
-const NuevoRecurso = () => {
+const NuevoRecurso = (props) => {
     const [error, guardarError] = useState(false);
 
     const [nuevorecurso,guardarNuevoRecurso] = useState({
@@ -17,6 +17,33 @@ const NuevoRecurso = () => {
     })
 
     const {titulo,descripcion,video,enlace,id_categoria}=nuevorecurso;
+    useEffect(() => {
+        const verificarToken = async () => {
+            try {
+                if (await localStorage.getItem('token')==undefined) {
+                    props.history.push('/');
+                    return;
+                }
+                let token = await localStorage.getItem('token')
+                let base64Url = token.split('.')[1];
+                let base64= base64Url.replace('-', '+').replace('_','/');
+                const datos = JSON.parse(window.atob(base64))
+                debugger
+                let date= new Date();
+                let fecha_actual = Math.floor(date.getTime()/1000);
+
+                
+                if (fecha_actual>datos.exp) {
+                    props.history.push('/');
+                    return
+                }
+                
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        verificarToken();
+    }, [])
 
     const onChangeImage = e => {
         

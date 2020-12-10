@@ -1,10 +1,10 @@
-import React,{Fragment, useState} from 'react';
+import React,{Fragment, useState, useEffect} from 'react';
 import Error from '../layout/Error'
 
 import {Link} from 'react-router-dom'
 
 
-const NuevoArticulo = () => {
+const NuevoArticulo = (props) => {
     
     const [error, guardarError] = useState(false);
     const [nuevoarticulo, guardarNuevoArticulo]= useState({
@@ -13,7 +13,38 @@ const NuevoArticulo = () => {
         contenido:''
     });
 
+    const [ idautor, setidAutor] = useState('');
+
     const { titulo, introduccion, contenido} = nuevoarticulo;
+
+    useEffect(() => {
+        const verificarToken = async () => {
+            try {
+                if (await localStorage.getItem('token')==undefined) {
+                    props.history.push('/');
+                    return;
+                }
+                let token = await localStorage.getItem('token')
+                let base64Url = token.split('.')[1];
+                let base64= base64Url.replace('-', '+').replace('_','/');
+                const datos = JSON.parse(window.atob(base64))
+                debugger
+                setidAutor(datos.json[0].id);
+                let date= new Date();
+                let fecha_actual = Math.floor(date.getTime()/1000);
+
+                
+                if (fecha_actual>datos.exp) {
+                    props.history.push('/');
+                    return
+                }
+                
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        verificarToken();
+    }, [])
 
     const onChange = e => {
         guardarNuevoArticulo({
@@ -79,7 +110,7 @@ const NuevoArticulo = () => {
         data.contenido = contenido
         data.fecha = fecha
         data.img = `${titulo} ${fecha} ${hora}`
-        data.id_autor = 1
+        data.id_autor = parseInt(idautor);
         
         let JSO = JSON.stringify(data)
         await fetch(url, {
