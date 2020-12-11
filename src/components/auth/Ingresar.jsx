@@ -6,12 +6,13 @@ import Youtube from '../../img/youtube.png'
 import Instagram from '../../img/instagram.png'
 
 import authContext from '../../context/autenticacion/authContext'
+import Error from '../layout/Error'
 
 import '../css/login.css'
 const Ingresar = (props) => {
 
     const AuthContext = useContext(authContext);
-    const { usuarioAutenticado } = AuthContext;
+    const { errorlogin, usuarioAutenticado } = AuthContext;
 
     const [user, guardarUser] = useState({
         usuario:'',
@@ -30,8 +31,9 @@ const Ingresar = (props) => {
     const onSubmit = async e =>{
         e.preventDefault();
         await usuarioAutenticado(usuario,pass)
-
-        props.history.push('/');
+        
+            props.history.push('/');
+        
 
     }
 
@@ -57,6 +59,7 @@ const Ingresar = (props) => {
                                 <label htmlFor="exampleInputPassword1">Contraseña:</label>
                                 <input type="password" name="pass" value={pass} onChange={onChange} className="form-control" id="exampleInputPassword1"/>
                             </div>
+                            
                             
                             <button type="submit" className="btn btn-success btn-block">Ingresar</button>
                         </form>

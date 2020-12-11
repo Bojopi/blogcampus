@@ -5,7 +5,8 @@ export default (state, action) => {
         
         case LOGIN_ERROR:
             return{
-                ...state,               
+                ...state,
+                errorlogin:action.payload               
             }
         case OBTENER_USUARIO:
             // localStorage.setItem('token',action.payload.token);

@@ -4,6 +4,7 @@ import AuthContext from './authContext'
 import AuthReducer from './authReducer'
 
 import clienteAxios from '../../config/axios'
+
 // import tokenAuth from '../../config/tokenAuth'
 
 import { OBTENER_USUARIO, LOGIN_ERROR } from '../../types'
@@ -13,7 +14,8 @@ const AuthState = props => {
         token:localStorage.getItem('token'),
         autenticado:null,
         usuario:null,
-        mensaje:null
+        mensaje:null,
+        errorlogin:false
     }
 
     const [state ,dispatch] = useReducer(AuthReducer,initialState);
@@ -21,9 +23,8 @@ const AuthState = props => {
     const usuarioAutenticado = async (usu,pass) =>{
         try {
             const respuesta = await clienteAxios.get(`http://localhost:4000/api/autenticacion/${usu}/${pass}`)
-            debugger
             console.log(respuesta)
-            if (Object.keys(respuesta.data).length > 0) {
+            if (Object.keys(respuesta.data).length != 0) {
 
                 let TOKEN = respuesta.data.token
                 await localStorage.setItem('token',TOKEN)
@@ -38,7 +39,12 @@ const AuthState = props => {
                 });
                 
             }else{
+                await localStorage.removeItem('token');
                 console.log('usuario incorrecto')
+                dispatch({
+                    type:LOGIN_ERROR,
+                    payload:true
+                })
             }
 
             
@@ -56,6 +62,7 @@ const AuthState = props => {
             autenticado:state.autenticado,
             usuario:state.usuario,
             mensaje:state.mensaje,
+            errorlogin:state.errorlogin,
             usuarioAutenticado,
         }}>
             {props.children}

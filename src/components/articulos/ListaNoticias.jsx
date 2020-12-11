@@ -23,11 +23,13 @@ const ListaNoticias = () => {
     }, [paginaActual])
     
     const avanzarPagina = () => {
-        setPaginaActual(paginaActual+1)
+        setPaginaActual(paginaActual+1);
+        document.documentElement.scrollTop=250;
         
     }
     const retrocederPagina = () => {
         setPaginaActual(paginaActual-1)
+        document.documentElement.scrollTop=250;
     }
 
     return ( 
