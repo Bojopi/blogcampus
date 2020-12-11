@@ -4,6 +4,8 @@ import Error from '../layout/Error'
 
 import axios from 'axios'
 
+import swal from 'sweetalert'
+
 const NuevoRecurso = (props) => {
     const [error, guardarError] = useState(false);
 
@@ -75,7 +77,7 @@ const NuevoRecurso = (props) => {
            
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
-        .then(response => alert('insertado correctamente'));
+        .then(response => swal("Exito!", "Recurso insertado correctamente", "success"));
         document.getElementById('imgLogo').src=''
     }
     

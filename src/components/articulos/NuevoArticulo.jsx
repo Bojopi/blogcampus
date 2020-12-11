@@ -3,6 +3,8 @@ import Error from '../layout/Error'
 
 import {Link} from 'react-router-dom'
 
+import swal from 'sweetalert'
+
 
 const NuevoArticulo = (props) => {
     
@@ -80,7 +82,7 @@ const NuevoArticulo = (props) => {
            
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
-        .then(response => alert('insertado correctamente'));
+        .then(response => swal("Exito!", "Articulo Creado", "success"));
         document.getElementById('imgss').src=''
     }
     
