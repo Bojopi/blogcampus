@@ -19,7 +19,7 @@ const RecursoState = props => {
     //serie de funciones para el CRUD
 
     const obtenerRecursos = async () =>{
-        const API = await fetch(`http://localhost:4000/api/traerRecursos`)
+        const API = await fetch(`https://blog-campus-api-2021.herokuapp.com/api/traerRecursos`)
         const respuesta = await API.json()
            dispatch({
                type:OBTENER_RECURSOS,
@@ -41,7 +41,7 @@ const RecursoState = props => {
 
     }
     const registrarRecurso = async recurso =>{
-        await axios.post('http://localhost:4000/api/registrarVenta', {
+        await axios.post('https://blog-campus-api-2021.herokuapp.com/api/registrarVenta', {
             // fecha_venta: fecha,
             // precio: parseInt(total),
             // tipo_pago:'Al Contado',

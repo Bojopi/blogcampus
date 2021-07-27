@@ -74,7 +74,7 @@ const NuevoArticulo = (props) => {
     const enviarImagen = async (formdata)=>{
         console.log(formdata)
 
-        const url = `http://localhost:4000/api/a`
+        const url = `https://blog-campus-api-2021.herokuapp.com/api/a`
 
         await fetch(url,{
             method:'POST',
@@ -104,7 +104,7 @@ const NuevoArticulo = (props) => {
         let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
         let hora = `${t.getHours()}.${t.getMinutes()}.${t.getSeconds()}`
 
-        const url = `http://localhost:4000/api/registrarArticulo`
+        const url = `https://blog-campus-api-2021.herokuapp.com/api/registrarArticulo`
 
         const data = {};
         data.titulo = titulo

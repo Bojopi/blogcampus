@@ -6,7 +6,7 @@ const Recurso = ({recurso}) => {
         <div className="card recur">
             <div className="card-header"></div>
             <div className="card-body">
-                <img src={`http://localhost:4000/img/recursos-logos/${recurso.logo}.png`} alt=""/>
+                <img src={`https://blog-campus-api-2021.herokuapp.com/img/recursos-logos/${recurso.logo}.png`} alt=""/>
                 <div className="parte-atras">
                     <p><u>{recurso.titulo}</u></p>
                     <br/>

@@ -16,7 +16,7 @@ const ArticuloState = props => {
     //serie de funciones para el CRUD
 
     const obtenerArticulos = async () =>{
-        // const API = await fetch(`http://localhost:4000/api/obtenerPuestos`)
+        // const API = await fetch(`https://blog-campus-api-2021.herokuapp.com/api/obtenerPuestos`)
         // const respuesta = await API.json()
         //    dispatch({
         //        type:OBTENER_PUESTOS,

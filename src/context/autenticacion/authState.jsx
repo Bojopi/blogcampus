@@ -22,7 +22,7 @@ const AuthState = props => {
 
     const usuarioAutenticado = async (usu,pass) =>{
         try {
-            const respuesta = await clienteAxios.get(`http://localhost:4000/api/autenticacion/${usu}/${pass}`)
+            const respuesta = await clienteAxios.get(`https://blog-campus-api-2021.herokuapp.com/api/autenticacion/${usu}/${pass}`)
             console.log(respuesta)
             if (Object.keys(respuesta.data).length != 0) {
 

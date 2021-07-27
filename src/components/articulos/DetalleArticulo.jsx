@@ -23,8 +23,8 @@ const DetalleArticulo = ({match}) => {
     useEffect(() => {
 
         const cargarArticulo = async () => {
-            const APIa = `http://localhost:4000/api/traerArticulo/${parseInt(match.params.id)}`;
-            const APIc = `http://localhost:4000/api/traerComentarios/${parseInt(match.params.id)}`;
+            const APIa = `https://blog-campus-api-2021.herokuapp.com/api/traerArticulo/${parseInt(match.params.id)}`;
+            const APIc = `https://blog-campus-api-2021.herokuapp.com/api/traerComentarios/${parseInt(match.params.id)}`;
 
             const [infoArticulo,listaComentarios] = await Promise.all([
                 axios(APIa),
@@ -68,7 +68,7 @@ const DetalleArticulo = ({match}) => {
         let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
         let hora = `${t.getHours()}:${t.getMinutes()}:${t.getSeconds()}`
 
-        const url = `http://localhost:4000/api/registrarComentario`
+        const url = `https://blog-campus-api-2021.herokuapp.com/api/registrarComentario`
 
         const data = {};
         data.autor = autor
@@ -111,7 +111,7 @@ const DetalleArticulo = ({match}) => {
                             <div className="card-body">
                                 {Object.keys(articulo).length === 0
                                     ?null
-                                    :<img src={`http://localhost:4000/img/${img}.jpg`} alt=""/>
+                                    :<img src={`https://blog-campus-api-2021.herokuapp.com/img/${img}.jpg`} alt=""/>
                                 }  
                             </div>
                         </div>

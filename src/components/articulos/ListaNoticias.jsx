@@ -11,9 +11,9 @@ const ListaNoticias = () => {
 
     useEffect(() => {
         const cargarArticulos = async () => {
-            const AP2 = await fetch(`http://localhost:4000/api/cantidadPaginas`);
+            const AP2 = await fetch(`https://blog-campus-api-2021.herokuapp.com/api/cantidadPaginas`);
             const respuesta2 = await AP2.json();
-            const API = await fetch(`http://localhost:4000/api/traerArticulos/${parseInt(paginaActual)}`);
+            const API = await fetch(`https://blog-campus-api-2021.herokuapp.com/api/traerArticulos/${parseInt(paginaActual)}`);
             const respuesta = await API.json();
             guardarCantidadPaginas(Math.ceil(parseInt(respuesta2[0].cantidad)/5))
             // debugger

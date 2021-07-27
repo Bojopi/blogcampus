@@ -9,7 +9,7 @@ const DetalleRecurso = ({match}) => {
     const [recurso,guardarRecurso]=useState({})
     useEffect(() => {
         const cargarRecurso = async () =>{
-            const API = await fetch(`http://localhost:4000/api/traerRecurso/${parseInt(match.params.id)}`);
+            const API = await fetch(`https://blog-campus-api-2021.herokuapp.com/api/traerRecurso/${parseInt(match.params.id)}`);
             const respuesta = await API.json();
             guardarRecurso(respuesta[0])
 
@@ -39,7 +39,7 @@ const DetalleRecurso = ({match}) => {
                             <p>{descripcion}</p>
                             {Object.keys(recurso).length === 0
                                 ?null
-                                :<img src={`http://localhost:4000/img/recursos-logos/${logo}.png`} alt=""/>
+                                :<img src={`https://blog-campus-api-2021.herokuapp.com/img/recursos-logos/${logo}.png`} alt=""/>
                             }
                             
                         </div>

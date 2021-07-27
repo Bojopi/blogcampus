@@ -15,7 +15,7 @@ const Noticia = ({noticia}) => {
             </div>
             <div className="card">
                 <div className="card-body">
-                    <img src={`http://localhost:4000/img/${noticia.img}.jpg`} alt=""/>
+                    <img src={`https://blog-campus-api-2021.herokuapp.com/img/${noticia.img}.jpg`} alt=""/>
                 </div>
             </div>
             <p className="intro">{noticia.introduccion}</p>

@@ -69,7 +69,7 @@ const NuevoRecurso = (props) => {
     const enviarImagen = async (formdata)=>{
         console.log(formdata)
 
-        const url = `http://localhost:4000/api/logoRecursos`
+        const url = `https://blog-campus-api-2021.herokuapp.com/api/logoRecursos`
 
         await fetch(url,{
             method:'POST',
@@ -95,7 +95,7 @@ const NuevoRecurso = (props) => {
         //insercion
         var t = new Date();
         let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
-        await axios.post('http://localhost:4000/api/registrarRecurso', {
+        await axios.post('https://blog-campus-api-2021.herokuapp.com/api/registrarRecurso', {
             titulo: titulo,
             descripcion: descripcion,
             logo: `${titulo}-${fecha}`,
